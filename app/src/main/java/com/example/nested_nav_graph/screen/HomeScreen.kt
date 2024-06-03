@@ -40,7 +40,11 @@ fun HomeScreen(
                     .padding(15.dp)
                     .clip(RoundedCornerShape(20.dp))
                     .clickable {
-                        navController.navigate(route = ScreenName.Detail.route)
+                        // Passing argument :->
+                        navController.navigate(route = ScreenName.Detail.passNameAndId(
+                            id = 1,
+                            name = "Android"
+                        ))
                     }
             )
 

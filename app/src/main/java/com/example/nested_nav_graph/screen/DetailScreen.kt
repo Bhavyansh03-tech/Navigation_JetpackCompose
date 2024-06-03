@@ -22,7 +22,9 @@ import com.example.nested_nav_graph.navigation.ScreenName
 
 @Composable
 fun DetailScreen(
-    navController: NavHostController
+    navController: NavHostController,
+    id: Int,
+    name: String
 ) {
 
     Box(
@@ -44,7 +46,7 @@ fun DetailScreen(
                         // navController.popBackStack()
 
                         // If you want to pass any data to the previous screen :->
-                        navController.navigate(route = ScreenName.Detail.route) {
+                        navController.navigate(route = ScreenName.Home.route) {
                             popUpTo(route = ScreenName.Home.route) {
                                 inclusive = true
                             }
@@ -55,7 +57,17 @@ fun DetailScreen(
             Text(
                 fontSize = MaterialTheme.typography.titleLarge.fontSize,
                 text = "Detail Screen"
-                )
+            )
+
+            // Arguments :->
+            Text(
+                fontSize = MaterialTheme.typography.labelSmall.fontSize,
+                text = "id : $id"
+            )
+            Text(
+                fontSize = MaterialTheme.typography.labelSmall.fontSize,
+                text = "name : $name"
+            )
         }
     }
 
