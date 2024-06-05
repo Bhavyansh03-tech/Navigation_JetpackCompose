@@ -32,13 +32,15 @@ To implement Nested Navigation Compose, follow these steps:
 1. Add navigation compose dependency in both libs.version.toml and gradle.build.
 
 ```bash
+[]
 navigationCompose = "2.7.7"
 
+[]
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
 ```
 
 
-2. Now create sealed class add screens name and routes.
+2. Now, create a sealed class to add screen names and routes.
 
 ```Kotlin
 // Passing arguments :
@@ -66,7 +68,7 @@ sealed class ScreenName(val route: String) {
 ```
 
 
-3. Now Create a kotlin file and set up navgraph in that file.
+3. Now, create a Kotlin file and set up the `NavGraph` in that file.
 
 ```Kotlin
 @Composable
