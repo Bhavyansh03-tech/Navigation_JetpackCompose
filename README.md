@@ -32,10 +32,10 @@ To implement Nested Navigation Compose, follow these steps:
 1. Add navigation compose dependency in both libs.version.toml and gradle.build.
 
 ```bash
-[]
+[versions]
 navigationCompose = "2.7.7"
 
-[]
+[libraries]
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
 ```
 
